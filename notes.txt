@@ -1,0 +1,5 @@
+dependencies:
+npm install @sanity/client @sanity/image-url framer-motion react-icons
+
+npm i sass
+
