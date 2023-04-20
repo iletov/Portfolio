@@ -3,6 +3,10 @@ npm install @sanity/client @sanity/image-url framer-motion react-icons
 
 npm i sass
 
+Sanity:
+npm run dev
+
+
 connect Sanity:
 1. open frontend folder - src -> (create new file client.js)
   - client.js:
@@ -11,11 +15,11 @@ connect Sanity:
 	import imageUrlBuilder from '@sanity/image-url';
 
 	export const client = sanityClient({
-  		projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
- 		 dataset: 'production',
+  		projectId: 		process.env.REACT_APP_SANITY_PROJECT_ID,
+ 		dataset: 'production',
   		apiVersion: '2022-02-01',
   		useCdn: true,
-  		token: skMM1S75zH5t5UziROjPS9Wy8jzldIvlw1hmsIeQAzQ5qfJgjsfmRSuA8wZjLNpQKh5jlKOiWLwlf3dlH8gNLiyOMBu8792GoFEVMlZIX6XNQ10nmt1n5XoPY9ybj471qJ0qGuGXiUnD4H2KfyTEhCJUxjQVMhoZo6OV78Gjx0TiwtYzgE4i,
+  		token: procces.env.REACT_APP_SANITY_TOKEN,
 	});
 
 	const builder = imageUrlBuilder(client);
