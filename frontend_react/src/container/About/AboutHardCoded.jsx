@@ -3,23 +3,15 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './About.scss';
-import { urlFor, client } from '../../client';
 
 
-// const abouts = [
-//   {title: 'Web Development', description: 'I am a web developer', imgUrl: images.about01},
-//   {title: 'Front-End', description: 'React Developer', imgUrl: images.about02},
-//   {title: 'Python', description: 'Python and Django', imgUrl: images.about03},
-// ]
+const abouts = [
+  {title: 'Web Development', description: 'I am a web developer', imgUrl: images.about01},
+  {title: 'Front-End', description: 'React Developer', imgUrl: images.about02},
+  {title: 'Python', description: 'Python and Django', imgUrl: images.about03},
+]
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => setAbouts(data))
-  },[])
 
   return (
     <>
@@ -35,7 +27,7 @@ const About = () => {
             className='app__profile-item'
             key={item.title + index}
           >
-            <img src={urlFor(item.imgUrl)} alt={item.title}/>
+            <img src={item.imgUrl} alt={item.title}/>
             <h2 className='bold-text' style={{ marginTop: 20 }}>{item.title}</h2>
             <p className='p-text' style={{ marginTop: 10 }}>{item.description}</p>
           </motion.div>
