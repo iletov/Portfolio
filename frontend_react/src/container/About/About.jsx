@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import { AppWrapp } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
 
-
-// const abouts = [
-//   {title: 'Web Development', description: 'I am a web developer', imgUrl: images.about01},
-//   {title: 'Front-End', description: 'React Developer', imgUrl: images.about02},
-//   {title: 'Python', description: 'Python and Django', imgUrl: images.about03},
-// ]
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -46,4 +40,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrapp(About, 'about');
